@@ -7,7 +7,6 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
 </head>
 <body>
   
@@ -77,13 +76,14 @@
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
     
-    $(function() {
-      $('.toggleNav').on('click',function() {
-        $('.flex-nav ul').toggleClass('open');
-      });
+    const toggleNav = document.querySelector('.toggleNav');
+    const flexNav = document.querySelector('.flex-nav');
+    const navUl = flexNav.querySelector('ul')
+
+    toggleNav.addEventListener('click', ()=>{
+        navUl.classList.toggle('open');
     });
 
   </script>
